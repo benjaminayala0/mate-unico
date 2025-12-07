@@ -1,0 +1,14 @@
+# Dependencias (pesan mucho)
+node_modules/
+*/node_modules/
+
+# Variables de entorno
+.env
+*/.env
+
+# Archivos de sistema y build
+.DS_Store
+dist/
+build/
+.tmp/
+public/uploads/

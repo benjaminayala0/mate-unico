@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "producto"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "esnew": {
+      "type": "boolean"
+    },
+    "esta_activo": {
+      "type": "boolean"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "material": {
+      "type": "enumeration",
+      "enum": [
+        "CALABAZA",
+        "VIDRIO",
+        "METAL",
+        "MADERA"
+      ]
+    },
+    "tipocombo": {
+      "type": "enumeration",
+      "enum": [
+        "Ninguno",
+        "Mate + Bombilla",
+        "Mate + Bombilla + Portatermo"
+      ]
+    },
+    "matecolor": {
+      "type": "string"
+    },
+    "congrabado": {
+      "type": "boolean"
+    },
+    "precio": {
+      "type": "biginteger"
+    },
+    "variantes_relacionadas": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::producto.producto",
+      "inversedBy": "variantes"
+    },
+    "variantes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::producto.producto",
+      "mappedBy": "variantes_relacionadas"
+    }
+  }
+}

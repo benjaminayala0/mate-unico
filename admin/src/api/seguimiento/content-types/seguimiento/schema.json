@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seguimientos",
+  "info": {
+    "singularName": "seguimiento",
+    "pluralName": "seguimientos",
+    "displayName": "seguimiento"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_id": {
+      "type": "integer"
+    },
+    "estado": {
+      "type": "enumeration",
+      "enum": [
+        "preparacion",
+        "camino",
+        "entregado"
+      ]
+    },
+    "codigo_seguimiento": {
+      "type": "string"
+    }
+  }
+}

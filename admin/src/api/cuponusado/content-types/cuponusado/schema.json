@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuponusados",
+  "info": {
+    "singularName": "cuponusado",
+    "pluralName": "cuponusados",
+    "displayName": "cuponusado"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cliente_id": {
+      "type": "integer"
+    },
+    "cupon_id": {
+      "type": "integer"
+    },
+    "pedido_id": {
+      "type": "integer"
+    }
+  }
+}
