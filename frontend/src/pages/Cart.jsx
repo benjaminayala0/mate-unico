@@ -31,7 +31,7 @@ export default function Cart() {
   const hayProductosSinStock = productosSinStock.length > 0;
 
   //  2. RECALCULAR TOTALES VISUALES 
-  //Esto es solo visual para el usuario. El backend en el checkout debería hacer lo mismo o limpiar el carrito.
+
   const subtotalReal = productosValidos.reduce((acc, item) => {
      const precio = Number(item.precio_unitario) + Number(item.costo_grabado);
      return acc + (precio * item.cantidad);

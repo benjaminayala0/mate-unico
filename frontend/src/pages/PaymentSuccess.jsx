@@ -74,12 +74,12 @@ export default function PaymentSuccess() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10 flex flex-col items-center">
 
-      {/* 🔥 TÍTULO AGREGADO */}
+      {/*  TÍTULO AGREGADO */}
       <h2 className="text-3xl font-bold text-gray-900 mb-8 hidden md:block">
        Completado!
       </h2>
       
-      {/* 🔥 STEPPER TIPO MOCKUP (Grilla de 3 columnas) */}
+      {/* STEPPER */}
       <div className="w-full max-w-3xl mb-12 hidden md:grid grid-cols-3 gap-8">
             
         {/* Paso 1: Carrito */}

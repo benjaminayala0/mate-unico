@@ -44,8 +44,6 @@ router.patch("/:id/foto", upload.single("foto"), async (req, res) => {
 // ELIMINAR FOTO
 router.delete("/:id/foto", eliminarFoto);
 
-
-// Alternativamente, si se desea usar el controlador del order.controller.js
 router.get("/:id/historial", getHistorialUsuario);
 
 export default router;

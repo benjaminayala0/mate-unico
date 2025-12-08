@@ -6,7 +6,7 @@ export const getOrderById = async (req, res) => {
   try {
     const { id } = req.params;
 
-    // A) Datos de la cabecera + SEGUIMIENTO
+    // A) Datos de Seguimiento
     const [orden] = await db.query(
       `SELECT 
           oc.*,
@@ -39,7 +39,6 @@ export const getOrderById = async (req, res) => {
     // C) Cargar imágenes desde Strapi 
     await Promise.all(items.map(async (item) => {
       try {
-        // Usamos localhost directo porque esto corre en el servidor
         const url = `http://127.0.0.1:1337/api/productos?filters[id][$eq]=${item.producto_id}&populate=*`;
         const response = await fetch(url);
         const data = await response.json();
@@ -74,10 +73,10 @@ export const getHistorialUsuario = async (req, res) => {
   try {
     const usuarioId = req.params.id;
 
-    // Filtrar solo 'aprobado' en SQL
-    // Esto evita traer basura de intentos fallidos
+    // Filtramos solo 'aprobado' en SQL
+    
     const [ordenes] = await db.query(
-      `SELECT 
+      `SELECT DISTINCT
           oc.id, 
           oc.monto_total, 
           oc.estado_pago, 

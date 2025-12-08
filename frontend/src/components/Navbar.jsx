@@ -19,7 +19,7 @@ export default function Navbar() {
   const { cart } = useCart();
   const cartCount = (cart || []).reduce((acc, item) => acc + item.cantidad, 0);
 
-  // 2.Escuchar cuando alguien grita "userUpdated"
+  // 2.Escuchar cuando alguien hace un "userUpdated"
   useEffect(() => {
     const handleUserUpdate = () => {
       // Releemos el localStorage
